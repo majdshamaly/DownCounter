@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://www.google.com/s2/favicons?domin=jacinto.design"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="proContainer">
+      <video
+        src="Sand-Clock .mp4"
+        class="backgroundVideo"
+        loop
+        muted
+        autoplay
+      ></video>
+      
+      <div class="counterContainer">
+        <div class="formContainer" >
+          <h1>Creat a Custom Counter</h1>
+          <form class="form">
+            <label for="title"></label>
+            <input
+              type="text"
+              id="title"
+              placeholder="What are you counting for?"
+            />
+            <label for="date"></label>
+            <input type="date" id="date" />
+            <input type="time" id="time" />
+            <button type="submit" class="submitBtn">Submit</button>
+          </form>
+        </div>
+
+        <!-- CountDown -->
+
+        <div class="countDown" >
+          <h1></h1>
+          <ul>
+            <li><span></span> Days</li>
+            <li><span></span> Hours</li>
+            <li><span></span> minuts</li>
+            <li><span></span> seconds</li>
+          </ul>
+          <button class="resetBtn">RESET</button>
+        </div>
+
+        <!-- CountDown finish -->
+
+        <div class="countDownFinish">
+          <h1>Countdown is Done</h1>
+          <h2>Your Countdown has finished at <span>5555</span></h1>
+          <button class="newCountDown">New Countdown</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    
+    <script src="script.js"></script>
+  </body>
+</html>

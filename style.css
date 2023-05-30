@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400&family=Roboto+Condensed&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.proContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  height: 100vh;
+  width: 100vw;
+  background-color: cadetblue;
+}
+.backgroundVideo {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+.counterContainer {
+  display: grid;
+  grid-template-rows: 25% 1fr;
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.formContainer h1 {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  /* height: 62%; */
+  margin: 15px 0;
+  font-size: 33px;
+  font-family: "Roboto Condensed", sans-serif;
+  margin-bottom: 10px;
+  text-align: center;
+  color: white;
+}
+
+.formContainer {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  width: 50%;
+  height: 100%;
+  margin: auto;
+}
+
+.form {
+  display: grid;
+  height: 500px;
+  border-top: 1px solid whitesmoke;
+  border-left: 1px solid whitesmoke;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  box-shadow: -10px -10px 10px 10px rgba(255, 255, 255, 0.3);
+}
+#title {
+  grid-row: 1/2;
+  width: 90%;
+  height: 40%;
+  justify-self: center;
+  align-self: center;
+  border-radius: 20px;
+  border: none;
+  padding: 0 10px;
+}
+
+#title:hover {
+  filter: brightness(95%);
+}
+
+#title:visited {
+  text-decoration: none;
+}
+
+#date {
+  grid-row: 2/3;
+  grid-column: 1/-1;
+  width: 40%;
+  height: 40%;
+  justify-self: start;
+  align-self: start;
+  border-radius: 20px;
+  border: none;
+  padding: 0 10px;
+  margin-left: 8px;
+}
+
+#time {
+  grid-row: 2/3;
+  grid-column: 1/-1;
+  width: 40%;
+  height: 40%;
+  justify-self: end;
+  align-self: start;
+  border-radius: 20px;
+  border: none;
+  padding: 0 10px;
+  margin-right: 8px;
+}
+#date:hover,
+#time:hover {
+  cursor: pointer;
+  filter: brightness(95%);
+}
+.submitBtn {
+  grid-row: 3/4;
+  width: 20%;
+  height: 40%;
+  justify-self: center;
+  align-self: start;
+  border-radius: 20px;
+  border: none;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  padding: 0 10px;
+  font-family: "Roboto Condensed", sans-serif;
+  box-shadow: 0px 30px 155px -20px rgb(255, 255, 255);
+}
+.submitBtn:hover {
+  cursor: pointer;
+}
+
+/* CountDown */
+.countDown {
+  display: none;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  text-align: center;
+  color: white;
+}
+
+.countDown h1 {
+  grid-column: 1/4;
+  margin: auto;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.countDown ul {
+  grid-column: 1/4;
+  margin: auto;
+  list-style: none;
+}
+
+.countDown ul li {
+  float: left;
+  padding: 5px;
+  margin-right: 10px;
+  font-size: 2rem;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.countDown ul li span {
+  display: block;
+}
+
+.resetBtn {
+  margin: auto;
+  padding: 20px;
+  font-size: 1rem;
+  font-family: "Roboto Condensed", sans-serif;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 30px 155px -20px rgb(255, 255, 255);
+}
+.newCountDown:hover {
+  cursor: pointer;
+}
+
+.countDownFinish {
+  display: none;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  text-align: center;
+  color: white;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.countDownFinish h1 {
+  animation: countdownDone 4s infinite;
+  font-size: 3rem;
+}
+.countDownFinish h1 {
+  display: block;
+}
+.countDownFinish h2 {
+  font-size: 2rem;
+}
+.countDownFinish h2 span {
+  display: block;
+  margin-top: 10px;
+}
+@keyframes countdownDone {
+  0% {
+    color: rgb(59, 29, 226);
+  }
+  25% {
+    color: rgb(247, 36, 36);
+  }
+  50% {
+    color: rgb(91, 146, 20);
+    scale: 50%;
+  }
+  75% {
+    color: rgb(236, 225, 61);
+  }
+  100% {
+    color: rgb(243, 10, 2);
+  }
+}
+@keyframes seconds {
+  50% {
+    scale: 50%;
+  }
+}
+.newCountDown {
+  grid-row: 3/4;
+  width: 40%;
+  height: 40%;
+  justify-self: center;
+  align-self: center;
+  border-radius: 20px;
+  border: none;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  padding: 0 10px;
+  font-family: "Roboto Condensed", sans-serif;
+  box-shadow: 0px 30px 155px -20px rgb(255, 255, 255);
+}
+@media screen and (max-width: 600px) {
+  .formContainer {
+    width: 100%;
+  }
+
+  .form {
+    margin: 10px;
+  }
+
+  .formContainer h1 {
+    margin-bottom: 35px;
+    height: 5%;
+    font-size: 33px;
+    text-align: center;
+    color: white;
+  }
+  #date {
+    width: 40%;
+  }
+  #time {
+    width: 35%;
+  }
+  .submitBtn {
+    width: 60%;
+  }
+  #title {
+    width: 85%;
+  }
+  .countDown h1 {
+    font-size: 20px;
+  }
+  .countDown ul {
+    padding: 10px;
+    margin: auto;
+  }
+  .countDown ul li {
+    font-size: 25px;
+    padding: 5px;
+    margin: 5px;
+  }
+}
